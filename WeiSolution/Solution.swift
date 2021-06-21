@@ -18,8 +18,23 @@ public struct Solution: DailyLeetCodeCompatible {
 
 struct Test1: TestEasy1Wrapper {
     
+    /// Use one for-loop and start at fisrt iterator,
+    /// If exist key as target minus currentValue in indexDict,
+    /// that both currentIndex and indexDict[Key] are the anwser.
+    /// otherwise, store the currentValue as Key and currentIndex as Value.
     func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
-        return [0]
+        var result: [Int] = []
+        var indexDict: [Int: Int] = [:]
+        nums.enumerated().forEach { (index, value) in
+            if let found = indexDict[target-value] {
+                result.append(found)
+                result.append(index)
+                return
+            } else {
+                indexDict[value] = index
+            }
+        }
+        return result
     }
     
 }
