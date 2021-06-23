@@ -11,6 +11,8 @@ public protocol DailyLeetCodeCompatible {
    
     var test1: TestEasy1Wrapper? { get }
     
+    var test7: TestEasy7Wrapper? { get }
+    
     var test6: TestMedium6Wrapper? { get }
     
 }
