@@ -13,8 +13,8 @@ public struct Solution: DailyLeetCodeCompatible {
     public init() {}
     
     public var test1: TestEasy1Wrapper? { Test1() }
-    
     public var test6: TestMedium6Wrapper? { Test6() }
+    public var test7: TestEasy7Wrapper? { Test7() }
     
 }
 
@@ -73,6 +73,32 @@ struct Test6: TestMedium6Wrapper {
         }
         
         return result.joined()
+    }
+
+}
+
+struct Test7: TestEasy7Wrapper {
+    
+    /// Use the flag to store the nagetive symbol and make x as positive
+    /// Use 2 parameters to store both result and currentX,
+    /// loop calculattion when currentX > 10
+    /// result = result *10 + newValue (newValue as currentX mod 10)
+    /// currentX = currentX / 10
+    ///
+    ///  Success:
+    /// - Runtime: 4 ms, faster than 88.99% of Swift online submissions for Reverse Integer.
+    /// - Memory Usage: 13.8 MB, less than 85.40% of Swift online submissions for Reverse Integer.
+    func reverse(_ x: Int) -> Int {
+        let symbolInteger = (x > 0) ? 1 : -1
+        var result = 0
+        var current = x * symbolInteger
+        while current > 0 {
+            result = result * 10 + current % 10
+            current = current / 10
+        }
+        result = result * symbolInteger
+        guard result <= Int32.max, result >= Int32.min else { return 0 }
+        return result
     }
     
 }
