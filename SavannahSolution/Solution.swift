@@ -14,7 +14,9 @@ public struct Solution: DailyLeetCodeCompatible {
     
     public var test1: TestEasy1Wrapper? { Test1() }
     
-    public var test3: TestMedium6Wrapper? { Test3() }
+    public var test6: TestMedium6Wrapper? { Test6() }
+    
+    public var test7: TestEasy7Wrapper? { Test7() }
     
 }
 
@@ -40,7 +42,7 @@ struct Test1: TestEasy1Wrapper {
     
 }
 
-struct Test3: TestMedium6Wrapper {
+struct Test6: TestMedium6Wrapper {
     // MARK: (success)
     ///example: "PAYPALISHIRING", numRows = 3
     ///創一個 array.count == numRows 的 array，代表圖形由上[index:0]到下[index:numRows-1]的每排字串
@@ -71,4 +73,24 @@ struct Test3: TestMedium6Wrapper {
         }
         return outputArray.joined()
     }
+    
+struct Test7: TestEasy7Wrapper {
+    
+    func reverse(_ x: Int) -> Int {
+        var input: Int = x
+        var result: Int = 0
+        
+        if input == 0 || input > Int32.max || input < Int32.min {
+            return 0
+        }
+        
+        while (input != 0) {
+            result = result * 10 + input % 10
+            input = input / 10
+        }
+        
+        
+        return result
+    }
+    
 }
