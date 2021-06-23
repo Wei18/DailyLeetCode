@@ -14,6 +14,8 @@ public struct Solution: DailyLeetCodeCompatible {
     
     public var test1: TestEasy1Wrapper? { Test1() }
     
+    public var test3: TestMedium6Wrapper? { Test3() }
+    
 }
 
 struct Test1: TestEasy1Wrapper {
@@ -36,4 +38,37 @@ struct Test1: TestEasy1Wrapper {
         return []
     }
     
+}
+
+struct Test3: TestMedium6Wrapper {
+    // MARK: (success)
+    ///example: "PAYPALISHIRING", numRows = 3
+    ///創一個 array.count == numRows 的 array，代表圖形由上[index:0]到下[index:numRows-1]的每排字串
+    ///用迴圈跑 s 裡的每個 character，以 ZigZag 跑法順序對照圖形 Array index 為：
+    ///[0] -> [1] -> [2] -> [1] -> [0] -> [1] .... 直到最後一個 character
+    ///可以發現 index == 0 時，下一個 index 要 +1
+    ///而 index == numRows-1 時要 -1
+    ///將 character 以此規律放入 array 後，再組成 String 傳出去
+    func convert(_ s: String, _ numRows: Int) -> String {
+        guard numRows > 1 else { return s }
+        
+        var outputArray = Array(repeating: "", count: numRows)
+        var currentIndex = 0
+        var nextIndexshouldPlusOne: Bool = true
+        
+        for character in s {
+            outputArray[currentIndex] = "\(outputArray[currentIndex])\(character)"
+            
+            if nextIndexshouldPlusOne {
+                currentIndex += 1
+            } else {
+                currentIndex -= 1
+            }
+            
+            if currentIndex == 0 || currentIndex == numRows - 1 {
+                nextIndexshouldPlusOne = !nextIndexshouldPlusOne
+            }
+        }
+        return outputArray.joined()
+    }
 }
