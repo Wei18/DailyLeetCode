@@ -80,7 +80,7 @@ struct Test7: TestEasy7Wrapper {
         var input: Int = x
         var result: Int = 0
         
-        if input == 0 || input > Int32.max || input < Int32.min {
+        if input == 0  {
             return 0
         }
         
@@ -89,8 +89,12 @@ struct Test7: TestEasy7Wrapper {
             input = input / 10
         }
         
+        if result > Int32.max || result < Int32.min {
+            return 0
+        } else {
+            return result
+        }
         
-        return result
     }
     
 }
