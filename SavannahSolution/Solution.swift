@@ -15,7 +15,7 @@ public struct Solution: DailyLeetCodeCompatible {
     public var test1: TestEasy1Wrapper? { Test1() }
     
     public var test6: TestMedium6Wrapper? { Test6() }
-    
+
     public var test7: TestEasy7Wrapper? { Test7() }
     
 }
@@ -73,9 +73,17 @@ struct Test6: TestMedium6Wrapper {
         }
         return outputArray.joined()
     }
+}
     
 struct Test7: TestEasy7Wrapper {
-    
+    // MARK: (success)
+    ///example: 123
+    ///從尾數開始處理。取 input 最後一個數字存入變數一：數字除十的餘數(3)
+    ///input 扣掉尾數後存入變數二：除十的值(12)
+    ///取 input 最後一個數：除十的餘數(2)，要讓此排列於 3 右邊，因此 3(變數一)*10 並相加
+    ///input 扣掉尾數後存入變數二：除十的值(1)
+    ///取 input 最後一個數：除十的餘數(1)，要讓此排列於 32 右邊，因此 32(變數一)*10 並相加
+    ///利用 input>0(處理到最後一個數字) 此條件去限制是否繼續迴圈
     func reverse(_ x: Int) -> Int {
         var input: Int = x
         var result: Int = 0
