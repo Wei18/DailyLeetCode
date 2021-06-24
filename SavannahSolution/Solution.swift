@@ -110,6 +110,9 @@ struct Test7: TestEasy7Wrapper {
 struct Test9: TestEasy9Wrapper {
     
     // MARK: Solution 1(success)
+    ///先處理 x 範圍，並轉成 String 就不用處理負號
+    ///走一個 x 迴圈，反向存入新的 property
+    ///去比較其與 x 是否相同
     ///Runtime = 64 ms
     func isPalindromeOrNot(_ x: Int) -> Bool {
         if x < Int32.min || x > Int32.max {
@@ -119,6 +122,7 @@ struct Test9: TestEasy9Wrapper {
         let string = String(x)
         var reverseString = ""
         
+        //可以直接使用 string.reversed()
         for character in string {
             reverseString = "\(character)\(reverseString)"
         }
@@ -130,6 +134,7 @@ struct Test9: TestEasy9Wrapper {
     }
     
     // MARK: Solution 2(success)
+    ///利用與 test7 相同的想法，用數字去處理
     ///Runtime = 40 ms
     func isPalindrome(_ x: Int) -> Bool {
         if x < Int32.min || x > Int32.max || x < 0 {
