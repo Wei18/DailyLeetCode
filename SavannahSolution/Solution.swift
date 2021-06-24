@@ -17,6 +17,8 @@ public struct Solution: DailyLeetCodeCompatible {
     public var test6: TestMedium6Wrapper? { Test6() }
 
     public var test7: TestEasy7Wrapper? { Test7() }
+
+    public var test7: TestEasy9Wrapper? { Test9() }
     
 }
 
@@ -105,4 +107,41 @@ struct Test7: TestEasy7Wrapper {
         
     }
     
+struct Test9: TestEasy9Wrapper {
+    
+    // MARK: Solution 1(success)
+    ///Runtime = 64 ms
+    func isPalindromeOrNot(_ x: Int) -> Bool {
+        if x < Int32.min || x > Int32.max {
+            return false
+        }
+        
+        let string = String(x)
+        var reverseString = ""
+        
+        for character in string {
+            reverseString = "\(character)\(reverseString)"
+        }
+        if reverseString == string {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    // MARK: Solution 2(success)
+    ///Runtime = 40 ms
+    func isPalindrome(_ x: Int) -> Bool {
+        if x < Int32.min || x > Int32.max || x < 0 {
+            return false
+        }
+        var input: Int = x
+        var result: Int = 0
+        
+        while (input != 0) {
+            result = result * 10 + input % 10
+            input /= 10
+        }
+        return result == x
+    }
 }
