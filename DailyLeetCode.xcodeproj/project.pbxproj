@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		249DC34026835D3000CE9328 /* 7. Reverse Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249DC33F26835D3000CE9328 /* 7. Reverse Integer.swift */; };
+		249DC34226839A8700CE9328 /* 9. Palindrome Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249DC34126839A8700CE9328 /* 9. Palindrome Number.swift */; };
 		A6CF2B4B2680C78200FDD65A /* DailyLeetCode.h in Headers */ = {isa = PBXBuildFile; fileRef = A6CF2B3D2680C78200FDD65A /* DailyLeetCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6CF2B8D2680C95600FDD65A /* Compatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CF2B8C2680C95600FDD65A /* Compatible.swift */; };
 		A6CF2B9B2680CE1400FDD65A /* DailyLeetCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6CF2B3A2680C78200FDD65A /* DailyLeetCode.framework */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		249DC33F26835D3000CE9328 /* 7. Reverse Integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "7. Reverse Integer.swift"; sourceTree = "<group>"; };
+		249DC34126839A8700CE9328 /* 9. Palindrome Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "9. Palindrome Number.swift"; sourceTree = "<group>"; };
 		A6CF2B3A2680C78200FDD65A /* DailyLeetCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DailyLeetCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6CF2B3D2680C78200FDD65A /* DailyLeetCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyLeetCode.h; sourceTree = "<group>"; };
 		A6CF2B3E2680C78200FDD65A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 			children = (
 				A6CF2BE42682442600FDD65A /* 1. Two Sum.swift */,
 				249DC33F26835D3000CE9328 /* 7. Reverse Integer.swift */,
+				249DC34126839A8700CE9328 /* 9. Palindrome Number.swift */,
 			);
 			path = Easy;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 			files = (
 				A6CF2BE52682442600FDD65A /* 1. Two Sum.swift in Sources */,
 				A6CF2B8D2680C95600FDD65A /* Compatible.swift in Sources */,
+				249DC34226839A8700CE9328 /* 9. Palindrome Number.swift in Sources */,
 				249DC34026835D3000CE9328 /* 7. Reverse Integer.swift in Sources */,
 				A6CF2BE22682440C00FDD65A /* 6. ZigZag Conversion.swift in Sources */,
 			);
