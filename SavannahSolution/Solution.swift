@@ -14,7 +14,9 @@ public struct Solution: DailyLeetCodeCompatible {
     
     public var test1: TestEasy1Wrapper? { Test1() }
     
-    public var test3: TestMedium6Wrapper? { Test3() }
+    public var test6: TestMedium6Wrapper? { Test6() }
+
+    public var test7: TestEasy7Wrapper? { Test7() }
     
 }
 
@@ -40,7 +42,7 @@ struct Test1: TestEasy1Wrapper {
     
 }
 
-struct Test3: TestMedium6Wrapper {
+struct Test6: TestMedium6Wrapper {
     // MARK: (success)
     ///example: "PAYPALISHIRING", numRows = 3
     ///創一個 array.count == numRows 的 array，代表圖形由上[index:0]到下[index:numRows-1]的每排字串
@@ -71,4 +73,36 @@ struct Test3: TestMedium6Wrapper {
         }
         return outputArray.joined()
     }
+}
+    
+struct Test7: TestEasy7Wrapper {
+    // MARK: (success)
+    ///example: 123
+    ///從尾數開始處理。取 input 最後一個數字存入變數一：數字除十的餘數(3)
+    ///input 扣掉尾數後存入變數二：除十的值(12)
+    ///取 input 最後一個數：除十的餘數(2)，要讓此排列於 3 右邊，因此 3(變數一)*10 並相加
+    ///input 扣掉尾數後存入變數二：除十的值(1)
+    ///取 input 最後一個數：除十的餘數(1)，要讓此排列於 32 右邊，因此 32(變數一)*10 並相加
+    ///利用 input>0(處理到最後一個數字) 此條件去限制是否繼續迴圈
+    func reverse(_ x: Int) -> Int {
+        var input: Int = x
+        var result: Int = 0
+        
+        if input == 0  {
+            return 0
+        }
+        
+        while (input != 0) {
+            result = result * 10 + input % 10
+            input = input / 10
+        }
+        
+        if result > Int32.max || result < Int32.min {
+            return 0
+        } else {
+            return result
+        }
+        
+    }
+    
 }
