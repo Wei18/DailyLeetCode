@@ -17,4 +17,5 @@ public protocol DailyLeetCodeCompatible {
     
     var test9: TestEasy9Wrapper? { get }
     
+    var test13: TestEasy13Wrapper? { get }
 }
