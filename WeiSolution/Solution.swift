@@ -15,6 +15,7 @@ public struct Solution: DailyLeetCodeCompatible {
     public var test1: TestEasy1Wrapper? { Test1() }
     public var test6: TestMedium6Wrapper? { Test6() }
     public var test7: TestEasy7Wrapper? { Test7() }
+    public var test9: TestEasy9Wrapper? { Test9() }
     
 }
 
@@ -99,6 +100,39 @@ struct Test7: TestEasy7Wrapper {
         result = result * symbolInteger
         guard result <= Int32.max, result >= Int32.min else { return 0 }
         return result
+    }
+    
+}
+
+struct Test9: TestEasy9Wrapper {
+    
+    // Use binary search to loop startIndex and endIndex.
+    // Detect both elements, until startIndex >= endIndex
+    func isPalindrome(_ x: Int) -> Bool {
+        
+        guard x < 0 else { return false }
+        var x = x
+        var digits: [Int] = []
+        
+        while x > 0 {
+            digits.append(x % 10)
+            x = x / 10
+        }
+        
+        var lIndex = digits.startIndex
+        var rIndex = digits.endIndex
+        
+        while lIndex < rIndex {
+            if digits[lIndex] != digits[rIndex] {
+                return false
+            } else {
+                lIndex += 1
+                rIndex -= 1
+            }
+        }
+        
+        return true
+        
     }
     
 }
