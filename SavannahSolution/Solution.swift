@@ -18,7 +18,9 @@ public struct Solution: DailyLeetCodeCompatible {
     
     public var test7: TestEasy7Wrapper? { Test7() }
     
-    public var test7: TestEasy9Wrapper? { Test9() }
+    public var test9: TestEasy9Wrapper? { Test9() }
+    
+    public var test14: TestEasy14Wrapper? { Test14() }
     
     public var test13: TestEasy13Wrapper? { Test13() }
     
@@ -186,3 +188,28 @@ struct Test13 {
         return output
     }
 }
+
+struct Test14 {
+    // MARK:
+    ///固定拿 strs[0] 當檢查標準存入變數中，故迴圈要從 strs[1] 跑
+    ///當 strs[1].hasPrefix(strs[0]) == false，就把 strs[0] 字母往前條一格，再進行一次比對
+    ///當 strs[1].hasPrefix(變數) == true，進行下一次迴圈
+    ///最後一次迴圈跑完，strs[n].hasPref(變數) == true，return 變數
+    func longestCommonPrefix(_ strs: [String]) -> String {
+        guard strs.count >= 1 || strs.count <= 200 else { return "" }
+        var prefixString = strs[0]
+        
+        if strs.count == 1 {
+            return prefixString
+        } else {
+            for i in 1 ..< strs.count {
+                while !strs[i].hasPrefix(prefixString) {
+                    prefixString = String(prefixString.prefix(prefixString.count - 1))
+                }
+            }
+        }
+        return prefixString
+    }
+}
+
+
