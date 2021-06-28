@@ -22,6 +22,8 @@ public struct Solution: DailyLeetCodeCompatible {
     
     public var test14: TestEasy14Wrapper? { Test14() }
     
+    public var test13: TestEasy13Wrapper? { Test13() }
+    
 }
 
 struct Test1: TestEasy1Wrapper {
@@ -154,6 +156,39 @@ struct Test9: TestEasy9Wrapper {
     }
 }
 
+struct Test13 {
+    // MARK: (success)
+    ///example: "MCMXCIV" = 1994
+    ///先建立一個羅馬數字規則的 dict 及 property 存之後邏輯運算的結果
+    ///把 input 轉成可以取 index 順序的 Array
+    ///依 inputArray 順序跑回圈，將數字加到 output
+    ///但照羅馬數字的規則，若左邊(index - 1)小於右邊(index)，則需(右邊值 - 左邊值)
+    ///先前已經有將左邊(index - 1)加入 output，所以必須扣回
+    func romanToInt(_ s: String) -> Int {
+        guard 1 <= s.count && s.count <= 15 else { return 0 }
+        
+        let inputArray = Array(s)
+        let dict: [Character : Int] = ["I" : 1,
+                                       "V" : 5,
+                                       "X" : 10,
+                                       "L" : 50,
+                                       "C" : 100,
+                                       "D" : 500,
+                                       "M" : 1000]
+        var output: Int = 0
+        for index in 0 ..< inputArray.count {
+            if index - 1 >= 0,
+               dict[inputArray[index - 1]]! < dict[inputArray[index]]! {
+                output += dict[inputArray[index]]! - (2 * dict[inputArray[index - 1]]!)
+                
+            } else {
+                output += dict[inputArray[index]]!
+            }
+        }
+        return output
+    }
+}
+
 struct Test14 {
     // MARK:
     ///固定拿 strs[0] 當檢查標準存入變數中，故迴圈要從 strs[1] 跑
@@ -176,3 +211,5 @@ struct Test14 {
         return prefixString
     }
 }
+
+
