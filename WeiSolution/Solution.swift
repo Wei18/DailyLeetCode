@@ -12,10 +12,14 @@ public struct Solution: DailyLeetCodeCompatible {
     
     public init() {}
     
+    // MARK: Easy
     public var test1: TestEasy1Wrapper? { Test1() }
-    public var test6: TestMedium6Wrapper? { Test6() }
     public var test7: TestEasy7Wrapper? { Test7() }
     public var test9: TestEasy9Wrapper? { Test9() }
+    public var test13: TestEasy13Wrapper? { Test13() }
+    
+    // MARK: Medium
+    public var test6: TestMedium6Wrapper? { Test6() }
     
 }
 
@@ -75,7 +79,7 @@ struct Test6: TestMedium6Wrapper {
         
         return result.joined()
     }
-
+    
 }
 
 struct Test7: TestEasy7Wrapper {
@@ -133,6 +137,48 @@ struct Test9: TestEasy9Wrapper {
         
         return true
         
+    }
+    
+}
+
+struct Test13: TestEasy13Wrapper {
+    
+    /// Input: s = "III"
+    /// Input: s = "IV"
+    /// Input: s = "IX"
+    /// Input: s = "LVIII"
+    /// Input: s = "MCMXCIV"
+    /// Make a property result with type integer as 0,
+    /// Loop s string and each char, if currentChar > nextChar, result = result minus value of currentChar
+    /// Else result equal to result plus value of currentChar.
+    // Runtime: 24 ms, faster than 80.79% of Swift online submissions for Roman to Integer.
+    // Memory Usage: 14.7 MB, less than 26.77% of Swift online submissions for Roman to Integer.
+    func romanToInt_1(_ s: String) -> Int {
+        var result = 0
+        let romanValue: [Character: Int] = [
+            "I": 1,
+            "V": 5,
+            "X": 10,
+            "L": 50,
+            "C": 100,
+            "D": 500,
+            "M": 1000,
+        ]
+        for index in s.indices {
+            let value = romanValue[s[index]]!
+            let nextIndex = s.index(after: index)
+            if nextIndex < s.endIndex {
+                let nextValue = romanValue[s[nextIndex]]!
+                if value >= nextValue {
+                    result = result + value
+                } else {
+                    result = result - value
+                }
+            } else {
+                result = result + value
+            }
+        }
+        return result
     }
     
 }
