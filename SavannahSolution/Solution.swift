@@ -15,10 +15,12 @@ public struct Solution: DailyLeetCodeCompatible {
     public var test1: TestEasy1Wrapper? { Test1() }
     
     public var test6: TestMedium6Wrapper? { Test6() }
-
+    
     public var test7: TestEasy7Wrapper? { Test7() }
-
-    public var test7: TestEasy9Wrapper? { Test9() }
+    
+    public var test9: TestEasy9Wrapper? { Test9() }
+    
+    public var test14: TestEasy14Wrapper? { Test14() }
     
 }
 
@@ -76,7 +78,7 @@ struct Test6: TestMedium6Wrapper {
         return outputArray.joined()
     }
 }
-    
+
 struct Test7: TestEasy7Wrapper {
     // MARK: (success)
     ///example: 123
@@ -106,7 +108,8 @@ struct Test7: TestEasy7Wrapper {
         }
         
     }
-    
+}
+
 struct Test9: TestEasy9Wrapper {
     
     // MARK: Solution 1(success)
@@ -148,5 +151,11 @@ struct Test9: TestEasy9Wrapper {
             input /= 10
         }
         return result == x
+    }
+}
+
+struct Test14 {
+    func longestCommonPrefix(_ strs: [String]) -> String {
+        
     }
 }
