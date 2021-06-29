@@ -11,6 +11,7 @@
 		249AB4DE2689FAD5008E40BB /* 14. Longest Common Prefix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249AB4DD2689FAD5008E40BB /* 14. Longest Common Prefix.swift */; };
 		249DC34026835D3000CE9328 /* 7. Reverse Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249DC33F26835D3000CE9328 /* 7. Reverse Integer.swift */; };
 		249DC34226839A8700CE9328 /* 9. Palindrome Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249DC34126839A8700CE9328 /* 9. Palindrome Number.swift */; };
+		24F5B7E8268B532600825620 /* 20. Valid Parentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F5B7E7268B532600825620 /* 20. Valid Parentheses.swift */; };
 		A6CF2B4B2680C78200FDD65A /* DailyLeetCode.h in Headers */ = {isa = PBXBuildFile; fileRef = A6CF2B3D2680C78200FDD65A /* DailyLeetCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6CF2B8D2680C95600FDD65A /* Compatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CF2B8C2680C95600FDD65A /* Compatible.swift */; };
 		A6CF2B9B2680CE1400FDD65A /* DailyLeetCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6CF2B3A2680C78200FDD65A /* DailyLeetCode.framework */; };
@@ -55,6 +56,7 @@
 		249AB4DD2689FAD5008E40BB /* 14. Longest Common Prefix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "14. Longest Common Prefix.swift"; sourceTree = "<group>"; };
 		249DC33F26835D3000CE9328 /* 7. Reverse Integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "7. Reverse Integer.swift"; sourceTree = "<group>"; };
 		249DC34126839A8700CE9328 /* 9. Palindrome Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "9. Palindrome Number.swift"; sourceTree = "<group>"; };
+		24F5B7E7268B532600825620 /* 20. Valid Parentheses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "20. Valid Parentheses.swift"; sourceTree = "<group>"; };
 		A6CF2B3A2680C78200FDD65A /* DailyLeetCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DailyLeetCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6CF2B3D2680C78200FDD65A /* DailyLeetCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyLeetCode.h; sourceTree = "<group>"; };
 		A6CF2B3E2680C78200FDD65A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				249DC34126839A8700CE9328 /* 9. Palindrome Number.swift */,
 				240365AC26872AF5008ADBB8 /* 13. Roman to Integer.swift */,
 				249AB4DD2689FAD5008E40BB /* 14. Longest Common Prefix.swift */,
+				24F5B7E7268B532600825620 /* 20. Valid Parentheses.swift */,
 			);
 			path = Easy;
 			sourceTree = "<group>";
@@ -556,6 +559,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24F5B7E8268B532600825620 /* 20. Valid Parentheses.swift in Sources */,
 				A6CF2BE52682442600FDD65A /* 1. Two Sum.swift in Sources */,
 				240365AD26872AF5008ADBB8 /* 13. Roman to Integer.swift in Sources */,
 				249AB4DE2689FAD5008E40BB /* 14. Longest Common Prefix.swift in Sources */,
