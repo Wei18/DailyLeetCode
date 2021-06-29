@@ -17,6 +17,7 @@ public struct Solution: DailyLeetCodeCompatible {
     public var test7: TestEasy7Wrapper? { Test7() }
     public var test9: TestEasy9Wrapper? { Test9() }
     public var test13: TestEasy13Wrapper? { Test13() }
+    public var test14: TestEasy14Wrapper? { Test14() }
     
     // MARK: Medium
     public var test6: TestMedium6Wrapper? { Test6() }
@@ -153,7 +154,7 @@ struct Test13: TestEasy13Wrapper {
     /// Else result equal to result plus value of currentChar.
     // Runtime: 24 ms, faster than 80.79% of Swift online submissions for Roman to Integer.
     // Memory Usage: 14.7 MB, less than 26.77% of Swift online submissions for Roman to Integer.
-    func romanToInt_1(_ s: String) -> Int {
+    func romanToInt(_ s: String) -> Int {
         var result = 0
         let romanValue: [Character: Int] = [
             "I": 1,
@@ -179,6 +180,33 @@ struct Test13: TestEasy13Wrapper {
             }
         }
         return result
+        
+    }
+    
+}
+
+struct Test14: TestEasy14Wrapper {
+    
+    /// Get the element form strs store into property result,
+    /// And then loop strs, each element in strs will compare with property result for longestCommonPrefix,
+    /// If not, the property result will drop last char, until we find longestCommonPrefix,
+    /// and then loop next element
+    /// Runtime: 8 ms, faster than 98.52% of Swift online submissions for Longest Common Prefix.
+    /// Memory Usage: 14.4 MB, less than 54.17% of Swift online submissions for Longest Common Prefix.
+    func longestCommonPrefix(_ strs: [String]) -> String {
+        guard strs.count > 0 else { return "" }
+        guard strs.count > 1, var result = strs.first else { return strs.first! }
+        
+        for index in 1..<strs.count {
+            
+            while !strs[index].hasPrefix(result), !result.isEmpty {
+                _ = result.popLast()
+            }
+            
+        }
+        
+        return result
+        
     }
     
 }
