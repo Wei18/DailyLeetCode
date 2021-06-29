@@ -18,6 +18,7 @@ public struct Solution: DailyLeetCodeCompatible {
     public var test9: TestEasy9Wrapper? { Test9() }
     public var test13: TestEasy13Wrapper? { Test13() }
     public var test14: TestEasy14Wrapper? { Test14() }
+    public var test20: TestEasy20Wrapper? { Test20() }
     
     // MARK: Medium
     public var test6: TestMedium6Wrapper? { Test6() }
@@ -209,4 +210,40 @@ struct Test14: TestEasy14Wrapper {
         
     }
     
+}
+
+struct Test20: TestEasy20Wrapper {
+
+    // Runtime: 4 ms, faster than 90.27% of Swift online submissions for Valid Parentheses.
+    // Memory Usage: 14.6 MB, less than 35.04% of Swift online submissions for Valid Parentheses.
+    /// Loop s and handle each element char.
+    /// if char belong to the part of left, added in stack
+    /// if char belong to the part of right, compare with item from stack
+    /// return false when no comparable
+    /// or loop to end and return true.
+    func isValid(_ s: String) -> Bool {
+        var stack: [Character] = []
+        for char in s {
+            switch char {
+            case "(", "{", "[":
+                stack.append(char)
+            case ")":
+                if stack.popLast() != "(" {
+                    return false
+                }
+            case "}":
+                if stack.popLast() != "{" {
+                    return false
+                }
+            case "]":
+                if stack.popLast() != "[" {
+                    return false
+                }
+            default:
+                break
+            }
+        }
+        return stack.isEmpty
+    }
+
 }
