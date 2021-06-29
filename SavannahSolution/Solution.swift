@@ -24,6 +24,8 @@ public struct Solution: DailyLeetCodeCompatible {
     
     public var test13: TestEasy13Wrapper? { Test13() }
     
+    public var test20: TestEasy20Wrapper? { Test20() }
+    
 }
 
 struct Test1: TestEasy1Wrapper {
@@ -190,7 +192,7 @@ struct Test13 {
 }
 
 struct Test14 {
-    // MARK:
+    // MARK: (success)
     ///固定拿 strs[0] 當檢查標準存入變數中，故迴圈要從 strs[1] 跑
     ///當 strs[1].hasPrefix(strs[0]) == false，就把 strs[0] 字母往前條一格，再進行一次比對
     ///當 strs[1].hasPrefix(變數) == true，進行下一次迴圈
@@ -212,4 +214,40 @@ struct Test14 {
     }
 }
 
-
+struct Test20 {
+    // MARK:
+    ///創一個變數把 s 變成 array，以及 result: String 存結果
+    ///switch array，把三種左括號設為 case，期待的右半邊依序加入 result
+    ///遇到左括號時，去比對 result 最後一的是否相同，是的話拿掉這個值，進行下一輪
+    ///若不相同，表示數列不符合括號成隊，return false
+    ///直到 result 值被拿完，表示都成對，return true
+    func isValid(_ s: String) -> Bool {
+           let longestLength = NSDecimalNumber(decimal: pow(10, 4)).intValue
+        if s.count < 1 || s.count > longestLength {
+            return false
+        }
+        
+        let inputArray = Array(s)
+        var result = ""
+        
+        for string in inputArray {
+            switch string {
+            case "(":
+                result += ")"
+            case "{":
+                result += "}"
+            case "[":
+                result += "]"
+            default:
+                if result == "" {
+                    return false
+                }
+                if let lastChar = result.popLast(), lastChar != string {
+                    return false
+                }
+            }
+        }
+        guard result.isEmpty else { return false }
+        return true
+        }
+}
