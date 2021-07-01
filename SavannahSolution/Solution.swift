@@ -222,7 +222,7 @@ struct Test20 {
     ///若不相同，表示數列不符合括號成隊，return false
     ///直到 result 值被拿完，表示都成對，return true
     func isValid(_ s: String) -> Bool {
-           let longestLength = NSDecimalNumber(decimal: pow(10, 4)).intValue
+        let longestLength = NSDecimalNumber(decimal: pow(10, 4)).intValue
         if s.count < 1 || s.count > longestLength {
             return false
         }
@@ -249,5 +249,29 @@ struct Test20 {
         }
         guard result.isEmpty else { return false }
         return true
+    }
+}
+
+struct Test20 {
+    // MARK: Runtime: 28 ms,Memory Usage: 14.2 MB.
+    ///如果 low < high index，利用low + high index / 2 ，算出 mid index
+    ///比較 nums[mid] 跟 target
+    ///target < nums[mid]，代表 target 落在左邊，把 high 調到 mid - 1 位置。反之
+    ///當 low > high index，代表 target 位於 high index + 1 的位置
+    func searchInsert(_ nums: [Int], _ target: Int) -> Int {
+        var lowIndex = 0
+        var highIndex = nums.count - 1
+        
+        while highIndex >= lowIndex {
+            let midIndex = (lowIndex + highIndex) / 2
+            if target == nums[midIndex] {
+                return midIndex
+            } else if target > nums[midIndex] {
+                lowIndex = midIndex + 1
+            } else {
+                highIndex = midIndex - 1
+            }
         }
+        return highIndex + 1
+    }
 }
