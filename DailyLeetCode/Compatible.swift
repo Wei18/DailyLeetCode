@@ -23,4 +23,6 @@ public protocol DailyLeetCodeCompatible {
     
     var test20: TestEasy20Wrapper? { get }
     
+    var test35: TestEasy35Wrapper? { get }
+    
 }
