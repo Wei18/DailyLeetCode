@@ -62,8 +62,6 @@
 		A6CF2B3A2680C78200FDD65A /* DailyLeetCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DailyLeetCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6CF2B3D2680C78200FDD65A /* DailyLeetCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyLeetCode.h; sourceTree = "<group>"; };
 		A6CF2B3E2680C78200FDD65A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A6CF2B592680C8A000FDD65A /* Solution_Wei.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Solution_Wei.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A6CF2B752680C8DF00FDD65A /* Solution_Savannah.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Solution_Savannah.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6CF2B8C2680C95600FDD65A /* Compatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compatible.swift; sourceTree = "<group>"; };
 		A6CF2B962680CE1400FDD65A /* DailyLeetCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyLeetCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6CF2BA62680CFF800FDD65A /* WeiSolution.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeiSolution.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,20 +84,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		A6CF2B372680C78200FDD65A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A6CF2B562680C8A000FDD65A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A6CF2B722680C8DF00FDD65A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -163,8 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				A6CF2B3A2680C78200FDD65A /* DailyLeetCode.framework */,
-				A6CF2B592680C8A000FDD65A /* Solution_Wei.framework */,
-				A6CF2B752680C8DF00FDD65A /* Solution_Savannah.framework */,
 				A6CF2B962680CE1400FDD65A /* DailyLeetCodeTests.xctest */,
 				A6CF2BA62680CFF800FDD65A /* WeiSolution.framework */,
 				A6CF2BAE2680CFF800FDD65A /* WeiSolutionTests.xctest */,
@@ -257,20 +239,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A6CF2B542680C8A000FDD65A /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A6CF2B702680C8DF00FDD65A /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A6CF2BA12680CFF800FDD65A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -306,42 +274,6 @@
 			name = DailyLeetCode;
 			productName = DailyLeetCode;
 			productReference = A6CF2B3A2680C78200FDD65A /* DailyLeetCode.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		A6CF2B582680C8A000FDD65A /* Solution-Wei */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A6CF2B6E2680C8A000FDD65A /* Build configuration list for PBXNativeTarget "Solution-Wei" */;
-			buildPhases = (
-				A6CF2B542680C8A000FDD65A /* Headers */,
-				A6CF2B552680C8A000FDD65A /* Sources */,
-				A6CF2B562680C8A000FDD65A /* Frameworks */,
-				A6CF2B572680C8A000FDD65A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Solution-Wei";
-			productName = "Solution-Wei";
-			productReference = A6CF2B592680C8A000FDD65A /* Solution_Wei.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		A6CF2B742680C8DF00FDD65A /* Solution-Savannah */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A6CF2B862680C8DF00FDD65A /* Build configuration list for PBXNativeTarget "Solution-Savannah" */;
-			buildPhases = (
-				A6CF2B702680C8DF00FDD65A /* Headers */,
-				A6CF2B712680C8DF00FDD65A /* Sources */,
-				A6CF2B722680C8DF00FDD65A /* Frameworks */,
-				A6CF2B732680C8DF00FDD65A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Solution-Savannah";
-			productName = "Solution-Savannah";
-			productReference = A6CF2B752680C8DF00FDD65A /* Solution_Savannah.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A6CF2B952680CE1400FDD65A /* DailyLeetCodeTests */ = {
@@ -447,13 +379,6 @@
 						CreatedOnToolsVersion = 12.5;
 						LastSwiftMigration = 1250;
 					};
-					A6CF2B582680C8A000FDD65A = {
-						CreatedOnToolsVersion = 12.5;
-						LastSwiftMigration = 1250;
-					};
-					A6CF2B742680C8DF00FDD65A = {
-						CreatedOnToolsVersion = 12.5;
-					};
 					A6CF2B952680CE1400FDD65A = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -487,8 +412,6 @@
 			projectRoot = "";
 			targets = (
 				A6CF2B392680C78200FDD65A /* DailyLeetCode */,
-				A6CF2B582680C8A000FDD65A /* Solution-Wei */,
-				A6CF2B742680C8DF00FDD65A /* Solution-Savannah */,
 				A6CF2B952680CE1400FDD65A /* DailyLeetCodeTests */,
 				A6CF2BA52680CFF800FDD65A /* WeiSolution */,
 				A6CF2BAD2680CFF800FDD65A /* WeiSolutionTests */,
@@ -500,20 +423,6 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		A6CF2B382680C78200FDD65A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A6CF2B572680C8A000FDD65A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A6CF2B732680C8DF00FDD65A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -571,20 +480,6 @@
 				249DC34226839A8700CE9328 /* 9. Palindrome Number.swift in Sources */,
 				249DC34026835D3000CE9328 /* 7. Reverse Integer.swift in Sources */,
 				A6CF2BE22682440C00FDD65A /* 6. ZigZag Conversion.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A6CF2B552680C8A000FDD65A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A6CF2B712680C8DF00FDD65A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,105 +709,6 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zw.DailyLeetCode;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		A6CF2B6A2680C8A000FDD65A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = DS7FNLNW4K;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = WeiSolutionTests/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.zw.Solution-Wei";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		A6CF2B6B2680C8A000FDD65A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = DS7FNLNW4K;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = WeiSolutionTests/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.zw.Solution-Wei";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		A6CF2B872680C8DF00FDD65A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = DS7FNLNW4K;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SavannahSolutionTests/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.zw.Solution-Savannah";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		A6CF2B882680C8DF00FDD65A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = DS7FNLNW4K;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SavannahSolutionTests/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.zw.Solution-Savannah";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1151,24 +947,6 @@
 			buildConfigurations = (
 				A6CF2B4F2680C78200FDD65A /* Debug */,
 				A6CF2B502680C78200FDD65A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A6CF2B6E2680C8A000FDD65A /* Build configuration list for PBXNativeTarget "Solution-Wei" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A6CF2B6A2680C8A000FDD65A /* Debug */,
-				A6CF2B6B2680C8A000FDD65A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A6CF2B862680C8DF00FDD65A /* Build configuration list for PBXNativeTarget "Solution-Savannah" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A6CF2B872680C8DF00FDD65A /* Debug */,
-				A6CF2B882680C8DF00FDD65A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

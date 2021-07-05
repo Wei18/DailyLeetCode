@@ -19,6 +19,7 @@ public struct Solution: DailyLeetCodeCompatible {
     public var test13: TestEasy13Wrapper? { Test13() }
     public var test14: TestEasy14Wrapper? { Test14() }
     public var test20: TestEasy20Wrapper? { Test20() }
+    public var test35: TestEasy35Wrapper? { Test35() }
     
     // MARK: Medium
     public var test6: TestMedium6Wrapper? { Test6() }
@@ -246,4 +247,35 @@ struct Test20: TestEasy20Wrapper {
         return stack.isEmpty
     }
 
+}
+
+struct Test35: TestEasy35Wrapper {
+    
+    // Runtime: 28 ms, faster than 90.86% of Swift online submissions for Search Insert Position.
+    // Memory Usage: 14.4 MB, less than 34.41% of Swift online submissions for Search Insert Position.
+    /// nums contains distinct values sorted in ascending order.
+    /// so use binary search
+    /// and If not found, return the index where it would be if it were inserted in order.
+    func searchInsert(_ nums: [Int], _ target: Int) -> Int {
+        var l = nums.startIndex
+        var r = nums.endIndex-1
+        
+        while l <= r {
+            let m = (l + r) >> 1
+            if nums[m] == target {
+                return m
+            } else if nums[m] < target {
+                l = m + 1
+            } else {
+                r = m - 1
+            }
+        }
+        
+        // in the meantime, l == r == m, nums[m] < target,
+        // index l would be m + 1 and then while loop is break.
+        return l
+        
+    }
+    
+    
 }
