@@ -26,6 +26,8 @@ public struct Solution: DailyLeetCodeCompatible {
     
     public var test20: TestEasy20Wrapper? { Test20() }
     
+    public var test35: TestEasy35Wrapper? { Test20() }
+    
 }
 
 struct Test1: TestEasy1Wrapper {

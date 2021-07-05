@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol TestEasy35Wrapper {
+public protocol TestEasy21Wrapper {
     
     /// 21. Merge Two Sorted Lists
     ///
