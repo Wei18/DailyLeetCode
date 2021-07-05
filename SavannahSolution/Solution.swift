@@ -26,6 +26,8 @@ public struct Solution: DailyLeetCodeCompatible {
     
     public var test20: TestEasy20Wrapper? { Test20() }
     
+    public var test35: TestEasy35Wrapper? { Test20() }
+    
 }
 
 struct Test1: TestEasy1Wrapper {
@@ -252,7 +254,7 @@ struct Test20 {
     }
 }
 
-struct Test20 {
+struct Test35 {
     // MARK: Runtime: 28 ms,Memory Usage: 14.2 MB.
     ///如果 low < high index，利用low + high index / 2 ，算出 mid index
     ///比較 nums[mid] 跟 target

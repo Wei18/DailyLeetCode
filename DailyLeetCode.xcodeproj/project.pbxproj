@@ -12,6 +12,7 @@
 		249DC34026835D3000CE9328 /* 7. Reverse Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249DC33F26835D3000CE9328 /* 7. Reverse Integer.swift */; };
 		249DC34226839A8700CE9328 /* 9. Palindrome Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249DC34126839A8700CE9328 /* 9. Palindrome Number.swift */; };
 		24A06CA7268DE86D004E52F4 /* 35. Search Insert Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A06CA6268DE86D004E52F4 /* 35. Search Insert Position.swift */; };
+		24ED3E8626934DD600086224 /* 21. Merge Two Sorted Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ED3E8526934DD600086224 /* 21. Merge Two Sorted Lists.swift */; };
 		24F5B7E8268B532600825620 /* 20. Valid Parentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F5B7E7268B532600825620 /* 20. Valid Parentheses.swift */; };
 		A6CF2B4B2680C78200FDD65A /* DailyLeetCode.h in Headers */ = {isa = PBXBuildFile; fileRef = A6CF2B3D2680C78200FDD65A /* DailyLeetCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6CF2B8D2680C95600FDD65A /* Compatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CF2B8C2680C95600FDD65A /* Compatible.swift */; };
@@ -58,6 +59,7 @@
 		249DC33F26835D3000CE9328 /* 7. Reverse Integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "7. Reverse Integer.swift"; sourceTree = "<group>"; };
 		249DC34126839A8700CE9328 /* 9. Palindrome Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "9. Palindrome Number.swift"; sourceTree = "<group>"; };
 		24A06CA6268DE86D004E52F4 /* 35. Search Insert Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "35. Search Insert Position.swift"; sourceTree = "<group>"; };
+		24ED3E8526934DD600086224 /* 21. Merge Two Sorted Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "21. Merge Two Sorted Lists.swift"; sourceTree = "<group>"; };
 		24F5B7E7268B532600825620 /* 20. Valid Parentheses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "20. Valid Parentheses.swift"; sourceTree = "<group>"; };
 		A6CF2B3A2680C78200FDD65A /* DailyLeetCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DailyLeetCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6CF2B3D2680C78200FDD65A /* DailyLeetCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyLeetCode.h; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				249AB4DD2689FAD5008E40BB /* 14. Longest Common Prefix.swift */,
 				24F5B7E7268B532600825620 /* 20. Valid Parentheses.swift */,
 				24A06CA6268DE86D004E52F4 /* 35. Search Insert Position.swift */,
+				24ED3E8526934DD600086224 /* 21. Merge Two Sorted Lists.swift */,
 			);
 			path = Easy;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				24A06CA7268DE86D004E52F4 /* 35. Search Insert Position.swift in Sources */,
 				249DC34226839A8700CE9328 /* 9. Palindrome Number.swift in Sources */,
 				249DC34026835D3000CE9328 /* 7. Reverse Integer.swift in Sources */,
+				24ED3E8626934DD600086224 /* 21. Merge Two Sorted Lists.swift in Sources */,
 				A6CF2BE22682440C00FDD65A /* 6. ZigZag Conversion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
