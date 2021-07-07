@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		240365AD26872AF5008ADBB8 /* 13. Roman to Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240365AC26872AF5008ADBB8 /* 13. Roman to Integer.swift */; };
+		249312AC2695C10600854649 /* 237. Delete Node in a Linked List .swift in Sources */ = {isa = PBXBuildFile; fileRef = 249312AB2695C10600854649 /* 237. Delete Node in a Linked List .swift */; };
 		249AB4DE2689FAD5008E40BB /* 14. Longest Common Prefix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249AB4DD2689FAD5008E40BB /* 14. Longest Common Prefix.swift */; };
 		249DC34026835D3000CE9328 /* 7. Reverse Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249DC33F26835D3000CE9328 /* 7. Reverse Integer.swift */; };
 		249DC34226839A8700CE9328 /* 9. Palindrome Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249DC34126839A8700CE9328 /* 9. Palindrome Number.swift */; };
@@ -55,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		240365AC26872AF5008ADBB8 /* 13. Roman to Integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "13. Roman to Integer.swift"; sourceTree = "<group>"; };
+		249312AB2695C10600854649 /* 237. Delete Node in a Linked List .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "237. Delete Node in a Linked List .swift"; sourceTree = "<group>"; };
 		249AB4DD2689FAD5008E40BB /* 14. Longest Common Prefix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "14. Longest Common Prefix.swift"; sourceTree = "<group>"; };
 		249DC33F26835D3000CE9328 /* 7. Reverse Integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "7. Reverse Integer.swift"; sourceTree = "<group>"; };
 		249DC34126839A8700CE9328 /* 9. Palindrome Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "9. Palindrome Number.swift"; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				24F5B7E7268B532600825620 /* 20. Valid Parentheses.swift */,
 				24A06CA6268DE86D004E52F4 /* 35. Search Insert Position.swift */,
 				24ED3E8526934DD600086224 /* 21. Merge Two Sorted Lists.swift */,
+				249312AB2695C10600854649 /* 237. Delete Node in a Linked List .swift */,
 			);
 			path = Easy;
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				249AB4DE2689FAD5008E40BB /* 14. Longest Common Prefix.swift in Sources */,
 				A6CF2B8D2680C95600FDD65A /* Compatible.swift in Sources */,
 				24A06CA7268DE86D004E52F4 /* 35. Search Insert Position.swift in Sources */,
+				249312AC2695C10600854649 /* 237. Delete Node in a Linked List .swift in Sources */,
 				249DC34226839A8700CE9328 /* 9. Palindrome Number.swift in Sources */,
 				249DC34026835D3000CE9328 /* 7. Reverse Integer.swift in Sources */,
 				24ED3E8626934DD600086224 /* 21. Merge Two Sorted Lists.swift in Sources */,
