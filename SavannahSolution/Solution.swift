@@ -28,6 +28,8 @@ public struct Solution: DailyLeetCodeCompatible {
     
     public var test35: TestEasy35Wrapper? { Test20() }
     
+    public var test237: TestEasy237Wrapper? { Test20() }
+    
 }
 
 struct Test1: TestEasy1Wrapper {
@@ -275,5 +277,15 @@ struct Test35 {
             }
         }
         return highIndex + 1
+    }
+}
+
+struct Test237 {
+    func deleteNode(_ node: ListNode237?) {
+        guard let node = node else { return }
+        if let next = node.next {
+            node.val = next.val
+            node.next = next.next
+        }
     }
 }
