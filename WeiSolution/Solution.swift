@@ -19,6 +19,7 @@ public struct Solution: DailyLeetCodeCompatible {
     public var test13: TestEasy13Wrapper? { Test13() }
     public var test14: TestEasy14Wrapper? { Test14() }
     public var test20: TestEasy20Wrapper? { Test20() }
+    public var test21: TestEasy21Wrapper? { Test21() }
     public var test35: TestEasy35Wrapper? { Test35() }
     
     // MARK: Medium
@@ -247,6 +248,31 @@ struct Test20: TestEasy20Wrapper {
         return stack.isEmpty
     }
 
+}
+
+struct Test21: TestEasy21Wrapper {
+    
+    /// Use recursion function, pass the next listnode,
+    /// And after all, will get the merged list.
+    /// If `l1.value < l2.value`, store node l1,
+    /// and then pass node of l1.next and nod2 l2 into recursion method.
+    /// and return head that is compatible node in this postion.
+    func mergeTwoLists(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
+        guard let l1 = l1 else { return l2 }
+        guard let l2 = l2 else { return l1 }
+        
+        var head: ListNode
+        if l1.val < l2.val {
+            head = l1
+            head.next = mergeTwoLists(head.next, l2)
+        }else{
+            head = l2
+            head.next = mergeTwoLists(head.next, l1)
+        }
+        return head
+        
+    }
+    
 }
 
 struct Test35: TestEasy35Wrapper {
