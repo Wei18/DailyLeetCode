@@ -26,7 +26,9 @@ public struct Solution: DailyLeetCodeCompatible {
     
     public var test20: TestEasy20Wrapper? { Test20() }
     
-    public var test35: TestEasy35Wrapper? { Test20() }
+    public var test35: TestEasy35Wrapper? { Test35() }
+    
+    public var test21: TestEasy21Wrapper? { Test21() }
     
 }
 
@@ -275,5 +277,48 @@ struct Test35 {
             }
         }
         return highIndex + 1
+    }
+}
+
+/**
+ * Definition for singly-linked list.
+ */
+public class ListNode {
+    public var val: Int
+    public var next: ListNode?
+    public init() { self.val = 0; self.next = nil; }
+    public init(_ val: Int) { self.val = val; self.next = nil; }
+    public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
+}
+struct Test21 {
+    //MARK: 遞迴（Recursive）觀念
+    ///Example: ACE
+    ///         BDF
+    ///index:0) B>A，留下 A->，B-> 去跟 A->.next(C->) 比較
+    ///index:1) C>B，留下 B->，C-> 去跟 B->.next(D->) 比較
+    ///index:2) D>C，留下 C->，D-> 去跟 C->.next(E->) 比較
+    ///index:3) E>D，留下 D->，E-> 去跟 D->.next(F->) 比較
+    ///index:4) F>E，留下 E->，F-> 去跟 E->.next(nil) 比較
+    ///發現 l1 是 nil，return F 給 index4，接上原本留下的 E-> 變成 E->F
+    ///return 給 index3，，接上原本留下的 D-> 變成 D->E->F
+    ///return 給 index2，，接上原本留下的 C-> 變成 C->D->E->F
+    ///return 給 index1，，接上原本留下的 B-> 變成 B->C->D->E->F
+    ///return 給 index0，，接上原本留下的 A-> 變成 A->B->C->D->E->F
+    ///透過不斷呼叫自己這個 method，( A B )->( C B )->( C D )->( E D )->( E F )->( G F )
+    ///下個比較值為 nil 時，開始 return 給上層 method，( A _ )->( _ B )->( C _ )->( _ D )->( E _ )->( _  F)
+    ///時間複雜度為 n+m
+    func mergeTwoLists(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
+        if l1 == nil {
+            return l2
+        } else if l2 == nil {
+            return l1
+        }
+        if l1!.val < l2!.val {
+            l1!.next = mergeTwoLists(l1!.next, l2!)
+            return l1
+        } else {
+            l2!.next = mergeTwoLists(l2!.next, l1!)
+            return l2
+        }
     }
 }
